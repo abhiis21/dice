@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <title>LOOKS CHANGER</title>
+
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            background-color: bisque;
+        }
+        .heading{
+            font-family: "Permanent Marker";
+            font-size: 30px;
+            text-align: center;
+            color: brown;
+        }
+        .container{
+            width: 500px;
+            height: fit-content;
+            margin: 40px auto;
+            border: 2px solid red;
+            border-radius: 15px;
+
+        }
+        .img{
+            width: 270px;
+            height: 330px;
+            display: block;
+            margin: 10px auto;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            border: 2px solid #661a00  ;
+        }
+
+        .container2{
+           
+            display: flex;
+            justify-content: space-around;
+       
+        }
+
+        .btn1{
+            background-color:#333300;
+            color: white;
+            font-size: 20px;
+            font-family: cursive;
+            font-weight: bold;
+            width: 130px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: none;
+            padding-bottom: 5px;
+         cursor: pointer;
+        }
+        .btn2{
+            background-color: #804d00;
+            color: white;
+            font-size: 20px;
+            font-family: cursive;
+            font-weight: bold;
+            width: 130px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: none;
+            padding-bottom: 5px;
+            cursor: pointer;
+        }
+        .btn3{
+            background-color: #003300;
+            color: white;
+            font-size: 20px;
+            font-family: cursive;
+            font-weight: bold;
+            width: 130px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: none;
+            padding-bottom: 5px;
+            cursor: pointer;
+        }
+
+       
+
+    </style>
+</head>
+<body>
+
+    <div class="container" id="container">
+        <h1 class="heading" id="heading">See Rashmika In Different Looks</h1>
+        <img src="rashmika.jpg" alt="rashmika_img" id="rashmika" class="img">
+        <div class="container2">
+    
+            <button type="button" onclick="look('traditional')" class="btn1"  >Treditional</button>
+    
+            <button type="button" onclick="look('western') " class="btn2" >Western</button>
+    
+            <button type="button" onclick="look('punjabi')" class="btn3">Punjabi</button>
+        </div>
+    </div>
+
+
+    <script>
+       
+
+        function look(style){
+
+            const imgElement = document.getElementById("rashmika");
+            const containerElement = document.getElementById("container");
+            const headingElement = document.getElementById("heading");
+
+            if (style == 'traditional'){
+                
+            imgElement.src = "traditonal.jpg"
+            imgElement.style.border = "2px solid #333300"
+
+            containerElement.style.border = "2px solid #333300"
+
+            headingElement.innerText = "Treditional"
+            headingElement.style.color = "#333300"
+
+            } else if(style == "western"){
+            imgElement.src = "western.jpeg"
+            imgElement.style.border = "2px solid #804d00"
+
+           
+            containerElement.style.border = "2px solid #804d00"
+
+            
+            headingElement.innerText = "Western"
+            headingElement.style.color = "#804d00"
+
+            }else  if(style == "punjabi"){
+            imgElement.src = "punjabi.jpeg"
+            imgElement.style.border = "2px solid #003300"
+
+            
+            containerElement.style.border = "2px solid #003300"
+
+           
+            headingElement.innerText = "Punjabi"
+            headingElement.style.color = "#003300"
+            }
+  
+
+
+        }
+
+     
+    </script>
+</body>
+</html>
